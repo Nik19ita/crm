@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normolize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a class="logotype" href="#">
+                <img src="img/logotype.svg" alt="logotype" aria-label="Логотип">
+            </a>
+
+            <input class="header__input" type="text" placeholder="Введите запрос" id="input">
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <h2 class="title-h2">Клиенты</h2>
+
+            <div class="div-for-table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td><span class="td-id text-grey-12 arrow-up" id="id">ID</span></td>
+                            <td id="fio">
+                                <span class="td-fio text-grey-12 arrow-down">Фамилия Имя Отчество</span>
+                                <span class="td-fio-span-2">А-Я</span></td>
+                            <td><span class="td-date-create text-grey-12 arrow-down" id="create"> Дата и время <br>
+                                    создания</span></td>
+                            <td><span class="td-date-changes text-grey-12 arrow-down" id="update"> Последние<br>
+                                    изменения</span></td>
+                            <td class="text-grey-12">Контакты</td>
+                            <td class="text-grey-12">Действия</td>
+                        </tr>
+                    </thead>
+
+                    <tbody></tbody>
+
+                </table>
+            </div>
+
+
+
+            <div class="awaiting" id="awaiting">
+                <img class="awaiting__img" src="img/awaiting.svg" alt="" id="awaiting">
+            </div>
+
+            <button class="button popup-create-open"><span class="button__text">Добавить клиента</span></button>
+
+            <div class="popup popup-create">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <h3 class="popup-create__title-h3">Новый клиент</h3>
+
+                        <form action="#" class="form">
+                            <ul class="list">
+                                <li class="item">
+                                    <input class="input input-surname popup-create__input-name" id="surname-create"
+                                        type="text">
+                                    <label class="label text-grey-14" for="surname-create">Фамилия<span>*</span></label>
+                                </li>
+
+                                <li class="item">
+                                    <input class="input input-name  popup-create__input-surname" id="name-create"
+                                        type="text">
+                                    <label class="label text-grey-14" for="name-create">Имя<span>*</span></label>
+                                </li>
+
+                                <li class="item">
+                                    <input class="input input-lastname popup-create__input-lastname"
+                                        id="lastname-create" type="text">
+                                    <label class="label text-grey-14" for="lastname-create">Отчество</label>
+                                </li>
+                            </ul>
+
+                            <div class="div-for-button-add">
+                                <button class="button-add">
+                                    Добавить контакт
+                                </button>
+                            </div>
+
+                            <div>
+                                <button class="button-purple popup-create__button-save">Сохранить</button>
+                            </div>
+
+                            <div>
+                                <button class="popup-create__button-cancel close-popup">Отмена</button>
+                            </div>
+                        </form>
+
+                        <img class="cross close-popup" src="img/X.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup popup-change">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <div class="flex">
+                            <h3 class="title-h3">Изменить данные</h3>
+                            <span class="text-grey-12" id="id-change"></span>
+                        </div>
+
+                        <form action="#" class="form">
+                            <ul class="list">
+                                <li class="item">
+                                    <label class="text-grey-10" for="surname-change">Фамилия<span>*</span></label>
+                                    <input class="input input-surname" id="surname-change" type="text">
+                                </li>
+
+                                <li class="item">
+                                    <label class="text-grey-10" for="name-change">Имя<span>*</span></label>
+                                    <input class="input input-name" id="name-change" type="text">
+                                </li>
+
+                                <li class="item">
+                                    <label class="text-grey-10" for="lastname-change">Отчество</label>
+                                    <input class="input input-lastname last-input" id="lastname-change" type="text">
+                                </li>
+                            </ul>
+
+                            <div class="div-for-button-add">
+                                <button class="button-add">
+                                    Добавить контакт
+                                </button>
+                            </div>
+
+                            <div>
+                                <button class="button-purple button-save" id="button-save">Сохранить</button>
+                            </div>
+
+                            <div>
+                                <button class="popup-change__button-remove"><span class="button-cancel-text">Удалить
+                                        клиента</span></button>
+                            </div>
+                        </form>
+
+                        <img class="cross close-popup" src="img/X.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup popup-remove">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <h3 class="popup-remove__h3">Удалить клиента</h3>
+                        <p class="popup-remove__paragraf">Вы действительно хотите удалить данного клиента?</p>
+
+                        <div>
+                            <button class="button-purple popup-remove__button-remove ">Удалить</button>
+                        </div>
+
+                        <div>
+                            <button class="popup-remove__button-cancel close-popup">Отмена</button>
+                        </div>
+
+                        <img class="cross close-popup" src="img/X.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

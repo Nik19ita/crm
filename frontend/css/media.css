@@ -1,0 +1,34 @@
+@media (max-width: 945px) {
+    .td-last{
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .div-for-date{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .header {
+        padding: 8px 0;
+    }
+
+    .header__container {
+        justify-content: center;
+    }
+
+    .header__input {
+        display: none;
+    }
+
+    .logotype img{
+        width: 24px;
+        height: 24px;
+    }
+}
